@@ -64,6 +64,7 @@ The demo uses `student_exam_scores.csv` with the following fields:
 
 | Field | Type | Description |
 |-------|------|-------------|
+| `id` | number | auto-generated unique Identifier |
 | `student_id` | string | Unique student identifier (S001-S200) |
 | `hours_studied` | number | Hours spent studying |
 | `sleep_hours` | number | Hours of sleep per night |
@@ -92,7 +93,7 @@ class CSVGatewayAPI {
   async getRecords(params) { /* pagination, search, sort */ }
   async getRecord(id) { /* single record */ }
   async aggregate(params) { /* aggregations */ }
-  async search(query) { /* full-text search */ }
+  async search(query) { /* full-text search with pagination */ }
   async getChartData() { /* visualization data */ }
 }
 ```
